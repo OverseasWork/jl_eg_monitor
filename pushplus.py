@@ -50,8 +50,11 @@ def daily_monitor_app():
     模型监控
     '''
     for app,url in dbUrls.items():
+        time.sleep(60)
         log.logger.info(f"开始执行:{app},{url}")
         dt = query(url=url,sql=sql)
         log.logger.info(f"查询结果:{dt}")
+        # 过滤
+        dt = dt[dt.到期订单>=10]
         send_wechat(msg=dt,title=f"{app}")
         log.logger.info(f"完成报送,{app},{url}")
