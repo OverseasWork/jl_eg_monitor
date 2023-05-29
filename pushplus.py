@@ -14,8 +14,8 @@ warnings.filterwarnings('ignore')
 
 import requests
 import pandas as pd
-from db_url import dbUrls,query
-from sql import sql
+from db_url import dbUrls,risk_url,query
+from sql import sql,asy_sql
 
 pd.set_option('display.width', 1000)
 pd.set_option('colheader_justify', 'center')
@@ -56,5 +56,19 @@ def daily_monitor_app():
         log.logger.info(f"查询结果:{dt}")
         # 过滤
         dt = dt[dt.到期订单>=10]
+        if dt.empty:
+            continue
         send_wechat(msg=dt,title=f"{app}")
         log.logger.info(f"完成报送,{app},{url}")
+
+def asy_monitor_app():
+    '''
+    异步程序监控,存在一个小时前订单未处理报警
+    :return:
+    '''
+    log.logger.info(f"开始执行异步程序监控")
+    dt = query(risk_url,asy_sql)
+    log.logger.info(f"查询结果:{dt}")
+    if not dt.empty:
+        send_wechat(msg=dt,title="异步程序异常")
+        log.logger.info("完成异步程序异常报送")

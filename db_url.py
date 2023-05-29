@@ -21,6 +21,7 @@ eg06 = f"""mysql+mysqlconnector://eg06_eternal:{urlquote('eg06_eternal_!@#$Q5EnU
 
 eg07 = f"""mysql+mysqlconnector://eg07_pyramidcash:{urlquote('eg07_pyramidcash_!@#$Q5EnUS')}@rm-gw87d6x8wr33227bhno.mysql.germany.rds.aliyuncs.com/cash_eg07?charset=utf8"""
 
+risk_url = f"""mysql+mysqlconnector://cash_other:{urlquote('cash_other_!@#$Q5EnUS')}@rm-gw8id623b2e4b62ga2o.mysql.germany.rds.aliyuncs.com/cash_eg_other?charset=utf8"""
 
 dbUrls = {
     "cashhome":eg02,

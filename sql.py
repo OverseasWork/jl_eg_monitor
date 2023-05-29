@@ -7,7 +7,7 @@
 
 sql = """
 (SELECT socre_range,count(DISTINCT a.BUSI_ID) 进件量,count(DISTINCT BID_ID) 放款量,count(DISTINCT BID_ID)/count(DISTINCT a.BUSI_ID) 放款率,if(sum(case when agr_pd1 = 1 then 1 else 0 end )=0,null,sum(case when agr_pd1 = 1 then 1 else 0 end )) as 到期订单,concat(round(sum(case when def_pd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 首逾,concat(round(sum(case when def_pd3 = 1 then 1  else 0 end )/sum(case when agr_pd3 = 1 then 1 else 0 end )*100,2),'%') as 'T+3首逾',concat(round(sum(case when cpd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 当前在逾
-from(SELECT a.*,b.COMMENTS,c.*,case when RISK_RESULT<580 then '(-,580)'when RISK_RESULT<590 then '[580,590)'when RISK_RESULT<605 then '[590,605)'  when RISK_RESULT<640 then '[605,640)'when RISK_RESULT>=640 then '[640,+)'when FIRST_APP_STATUS=106 then '未跑模型分'end socre_range FROM loan_application a left JOIN (SELECT * from `third_risk`where risk_type='ABCASH_NEW_CUSTOMER_RISK_SCORE'  and JSON_EXTRACT(comments,'$.version') = '4.0') b on a.BUSI_ID=b.BUSI_ID   LEFT JOIN (SELECT 
+from(SELECT a.*,b.COMMENTS,c.*,case when RISK_RESULT<580 then '(-,580)'when RISK_RESULT<590 then '[580,590)'when RISK_RESULT<605 then '[590,605)'  when RISK_RESULT<640 then '[605,640)'when RISK_RESULT>=640 then '[640,+)'when FIRST_APP_STATUS=106 then '未跑模型分'end socre_range FROM loan_application a left JOIN (SELECT * from `third_risk`where risk_type='ABCASH_NEW_CUSTOMER_RISK_SCORE'  and JSON_EXTRACT(comments,'$.version') = '4.3') b on a.BUSI_ID=b.BUSI_ID   LEFT JOIN (SELECT 
 	T1.BID_ID,-- 流水号
 	T1.CUSTOMER_NO,-- 客户号
 	T1.PLAN_STATUS,-- 1 未到期 2 已结清 3逾期 4 逾期后结清
@@ -78,12 +78,12 @@ LEFT JOIN (SELECT CUSTOMER_NO,count(DISTINCT BID_ID) loans from acc_borrow_plan 
 LEFT JOIN loan_application T4 on T1.BID_ID=T4.BUSI_ID
 where T1.PLAN_STATUS<>7
 ) c on a.BUSI_ID=c.BID_ID 
-where a.CREATE_TIME>='20230410')a
+where a.CREATE_TIME>='20230522')a
 where (loan_rank=1 or loan_rank is null) and WHITE=0 and socre_range is not null
 GROUP BY socre_range)
 union
-SELECT 'V4.0模型',count(DISTINCT a.BUSI_ID) 进件量,count(DISTINCT BID_ID) 放款量,count(DISTINCT BID_ID)/count(DISTINCT a.BUSI_ID) 放款率,if(sum(case when agr_pd1 = 1 then 1 else 0 end )=0,null,sum(case when agr_pd1 = 1 then 1 else 0 end )) as 到期订单,concat(round(sum(case when def_pd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 首逾,concat(round(sum(case when def_pd3 = 1 then 1  else 0 end )/sum(case when agr_pd3 = 1 then 1 else 0 end )*100,2),'%') as 'T+3首逾',concat(round(sum(case when cpd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 当前在逾
-from(SELECT a.*,b.COMMENTS,c.*,case when RISK_RESULT<580 then '(-,580)'when RISK_RESULT<590 then '[580,590)'when RISK_RESULT<605 then '[590,605)'  when RISK_RESULT<640 then '[605,640)'when RISK_RESULT>=640 then '[640,+)'when FIRST_APP_STATUS=106 then '未跑模型分'end socre_range FROM loan_application a left JOIN (SELECT * from `third_risk`where risk_type='ABCASH_NEW_CUSTOMER_RISK_SCORE'  and JSON_EXTRACT(comments,'$.version') = '4.0') b on a.BUSI_ID=b.BUSI_ID   LEFT JOIN (SELECT 
+SELECT 'V4.3模型',count(DISTINCT a.BUSI_ID) 进件量,count(DISTINCT BID_ID) 放款量,count(DISTINCT BID_ID)/count(DISTINCT a.BUSI_ID) 放款率,if(sum(case when agr_pd1 = 1 then 1 else 0 end )=0,null,sum(case when agr_pd1 = 1 then 1 else 0 end )) as 到期订单,concat(round(sum(case when def_pd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 首逾,concat(round(sum(case when def_pd3 = 1 then 1  else 0 end )/sum(case when agr_pd3 = 1 then 1 else 0 end )*100,2),'%') as 'T+3首逾',concat(round(sum(case when cpd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 当前在逾
+from(SELECT a.*,b.COMMENTS,c.*,case when RISK_RESULT<580 then '(-,580)'when RISK_RESULT<590 then '[580,590)'when RISK_RESULT<605 then '[590,605)'  when RISK_RESULT<640 then '[605,640)'when RISK_RESULT>=640 then '[640,+)'when FIRST_APP_STATUS=106 then '未跑模型分'end socre_range FROM loan_application a left JOIN (SELECT * from `third_risk`where risk_type='ABCASH_NEW_CUSTOMER_RISK_SCORE'  and JSON_EXTRACT(comments,'$.version') = '4.3') b on a.BUSI_ID=b.BUSI_ID   LEFT JOIN (SELECT 
 	T1.BID_ID,-- 流水号
 	T1.CUSTOMER_NO,-- 客户号
 	T1.PLAN_STATUS,-- 1 未到期 2 已结清 3逾期 4 逾期后结清
@@ -154,11 +154,11 @@ LEFT JOIN (SELECT CUSTOMER_NO,count(DISTINCT BID_ID) loans from acc_borrow_plan 
 LEFT JOIN loan_application T4 on T1.BID_ID=T4.BUSI_ID
 where T1.PLAN_STATUS<>7
 ) c on a.BUSI_ID=c.BID_ID 
-where  a.CREATE_TIME>='20230410')a
+where  a.CREATE_TIME>='20230522')a
 where (loan_rank=1 or loan_rank is null) and WHITE=0 and socre_range<>'未跑模型分'
 union
-SELECT 'V4.0白名单',count(DISTINCT a.BUSI_ID) 进件量,count(DISTINCT BID_ID) 放款量,count(DISTINCT BID_ID)/count(DISTINCT a.BUSI_ID) 放款率,if(sum(case when agr_pd1 = 1 then 1 else 0 end )=0,null,sum(case when agr_pd1 = 1 then 1 else 0 end )) as 到期订单,concat(round(sum(case when def_pd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 首逾,concat(round(sum(case when def_pd3 = 1 then 1  else 0 end )/sum(case when agr_pd3 = 1 then 1 else 0 end )*100,2),'%') as 'T+3首逾',concat(round(sum(case when cpd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 当前在逾
-from(SELECT a.*,b.COMMENTS,c.*,case when RISK_RESULT<580 then '(-,580)'when RISK_RESULT<590 then '[580,590)'when RISK_RESULT<605 then '[590,605)'  when RISK_RESULT<640 then '[605,640)'when RISK_RESULT>=640 then '[640,+)'when FIRST_APP_STATUS=106 then '未跑模型分'end socre_range FROM loan_application a left JOIN (SELECT * from `third_risk`where risk_type='ABCASH_NEW_CUSTOMER_RISK_SCORE'  and JSON_EXTRACT(comments,'$.version') = '4.0') b on a.BUSI_ID=b.BUSI_ID   LEFT JOIN (SELECT 
+SELECT 'V4.3白名单',count(DISTINCT a.BUSI_ID) 进件量,count(DISTINCT BID_ID) 放款量,count(DISTINCT BID_ID)/count(DISTINCT a.BUSI_ID) 放款率,if(sum(case when agr_pd1 = 1 then 1 else 0 end )=0,null,sum(case when agr_pd1 = 1 then 1 else 0 end )) as 到期订单,concat(round(sum(case when def_pd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 首逾,concat(round(sum(case when def_pd3 = 1 then 1  else 0 end )/sum(case when agr_pd3 = 1 then 1 else 0 end )*100,2),'%') as 'T+3首逾',concat(round(sum(case when cpd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 当前在逾
+from(SELECT a.*,b.COMMENTS,c.*,case when RISK_RESULT<580 then '(-,580)'when RISK_RESULT<590 then '[580,590)'when RISK_RESULT<605 then '[590,605)'  when RISK_RESULT<640 then '[605,640)'when RISK_RESULT>=640 then '[640,+)'when FIRST_APP_STATUS=106 then '未跑模型分'end socre_range FROM loan_application a left JOIN (SELECT * from `third_risk`where risk_type='ABCASH_NEW_CUSTOMER_RISK_SCORE'  and JSON_EXTRACT(comments,'$.version') = '4.3') b on a.BUSI_ID=b.BUSI_ID   LEFT JOIN (SELECT 
 	T1.BID_ID,-- 流水号
 	T1.CUSTOMER_NO,-- 客户号
 	T1.PLAN_STATUS,-- 1 未到期 2 已结清 3逾期 4 逾期后结清
@@ -229,11 +229,11 @@ LEFT JOIN (SELECT CUSTOMER_NO,count(DISTINCT BID_ID) loans from acc_borrow_plan 
 LEFT JOIN loan_application T4 on T1.BID_ID=T4.BUSI_ID
 where T1.PLAN_STATUS<>7
 ) c on a.BUSI_ID=c.BID_ID 
-where  a.CREATE_TIME>='20230410')a
+where  a.CREATE_TIME>='20230522')a
 where (loan_rank=1 or loan_rank is null) and WHITE=1 and socre_range<>'未跑模型分'
 union
-SELECT 'V4.0整体',count(DISTINCT a.BUSI_ID) 进件量,count(DISTINCT BID_ID) 放款量,count(DISTINCT BID_ID)/count(DISTINCT a.BUSI_ID) 放款率,if(sum(case when agr_pd1 = 1 then 1 else 0 end )=0,null,sum(case when agr_pd1 = 1 then 1 else 0 end )) as 到期订单,concat(round(sum(case when def_pd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 首逾,concat(round(sum(case when def_pd3 = 1 then 1  else 0 end )/sum(case when agr_pd3 = 1 then 1 else 0 end )*100,2),'%') as 'T+3首逾',concat(round(sum(case when cpd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 当前在逾
-from(SELECT a.*,b.COMMENTS,c.*,case when RISK_RESULT<580 then '(-,580)'when RISK_RESULT<590 then '[580,590)'when RISK_RESULT<605 then '[590,605)'  when RISK_RESULT<640 then '[605,640)'when RISK_RESULT>=640 then '[640,+)'when FIRST_APP_STATUS=106 then '未跑模型分'end socre_range FROM loan_application a left JOIN (SELECT * from `third_risk`where risk_type='ABCASH_NEW_CUSTOMER_RISK_SCORE'  and JSON_EXTRACT(comments,'$.version') = '4.0') b on a.BUSI_ID=b.BUSI_ID   LEFT JOIN (SELECT 
+SELECT 'V4.3整体',count(DISTINCT a.BUSI_ID) 进件量,count(DISTINCT BID_ID) 放款量,count(DISTINCT BID_ID)/count(DISTINCT a.BUSI_ID) 放款率,if(sum(case when agr_pd1 = 1 then 1 else 0 end )=0,null,sum(case when agr_pd1 = 1 then 1 else 0 end )) as 到期订单,concat(round(sum(case when def_pd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 首逾,concat(round(sum(case when def_pd3 = 1 then 1  else 0 end )/sum(case when agr_pd3 = 1 then 1 else 0 end )*100,2),'%') as 'T+3首逾',concat(round(sum(case when cpd1 = 1 then 1  else 0 end )/sum(case when agr_pd1 = 1 then 1 else 0 end )*100,2),'%') as 当前在逾
+from(SELECT a.*,b.COMMENTS,c.*,case when RISK_RESULT<580 then '(-,580)'when RISK_RESULT<590 then '[580,590)'when RISK_RESULT<605 then '[590,605)'  when RISK_RESULT<640 then '[605,640)'when RISK_RESULT>=640 then '[640,+)'when FIRST_APP_STATUS=106 then '未跑模型分'end socre_range FROM loan_application a left JOIN (SELECT * from `third_risk`where risk_type='ABCASH_NEW_CUSTOMER_RISK_SCORE'  and JSON_EXTRACT(comments,'$.version') = '4.3') b on a.BUSI_ID=b.BUSI_ID   LEFT JOIN (SELECT 
 	T1.BID_ID,-- 流水号
 	T1.CUSTOMER_NO,-- 客户号
 	T1.PLAN_STATUS,-- 1 未到期 2 已结清 3逾期 4 逾期后结清
@@ -304,6 +304,10 @@ LEFT JOIN (SELECT CUSTOMER_NO,count(DISTINCT BID_ID) loans from acc_borrow_plan 
 LEFT JOIN loan_application T4 on T1.BID_ID=T4.BUSI_ID
 where T1.PLAN_STATUS<>7
 ) c on a.BUSI_ID=c.BID_ID 
-where  a.CREATE_TIME>='20230410')a
+where  a.CREATE_TIME>='20230522')a
 where (loan_rank=1 or loan_rank is null)  and socre_range<>'未跑模型分'
+"""
+
+asy_sql = """
+SELECT  COUNT(1) AS tot FROM  t_score_status WHERE  app_status  != 2 and create_time < date_sub(now(), interval 1 hour)
 """
