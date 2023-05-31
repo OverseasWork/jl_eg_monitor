@@ -58,6 +58,10 @@ def daily_monitor_app():
         dt = dt[dt.到期订单>0]
         if dt.empty:
             continue
+
+        dt['到期订单'] = dt['到期订单'].fillna(0).astype(int)
+        dt['放款率'] = dt['放款率'].apply(lambda  x:str(x*100)+'%')
+        dt = dt.fillna('null')
         send_wechat(msg=dt,title=f"{app}")
         log.logger.info(f"完成报送,{app},{url}")
 
