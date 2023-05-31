@@ -50,7 +50,7 @@ def daily_monitor_app():
     模型监控
     '''
     for app,url in dbUrls.items():
-        time.sleep(60)
+        time.sleep(120)
         log.logger.info(f"开始执行:{app},{url}")
         dt = query(url=url,sql=sql)
         log.logger.info(f"查询结果:{dt}")
@@ -60,7 +60,7 @@ def daily_monitor_app():
             continue
 
         dt['到期订单'] = dt['到期订单'].fillna(0).astype(int)
-        dt['放款率'] = dt['放款率'].apply(lambda  x:str(round(x,3)*100)+'%')
+        dt['放款率'] = dt['放款率'].apply(lambda  x:str(round(x*100,1))[:4] + '%')
         dt = dt.fillna('null')
         send_wechat(msg=dt,title=f"{app}")
         log.logger.info(f"完成报送,{app},{url}")
