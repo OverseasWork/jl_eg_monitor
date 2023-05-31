@@ -55,7 +55,7 @@ def daily_monitor_app():
         dt = query(url=url,sql=sql)
         log.logger.info(f"查询结果:{dt}")
         # 过滤
-        dt = dt[dt.到期订单>=10]
+        dt = dt[dt.到期订单>0]
         if dt.empty:
             continue
         send_wechat(msg=dt,title=f"{app}")
