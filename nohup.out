@@ -1,0 +1,73 @@
+nohup: ignoring input
+nohup: ignoring input
+nohup: ignoring input
+Traceback (most recent call last):
+  File "monitor_main.py", line 40, in <module>
+    def asy_monitor_job():
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 470, in inner
+    self.add_job(func, trigger, args, kwargs, id, name, misfire_grace_time, coalesce,
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 424, in add_job
+    'trigger': self._create_trigger(trigger, trigger_args),
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 925, in _create_trigger
+    return self._create_plugin_instance('trigger', trigger, trigger_args)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 910, in _create_plugin_instance
+    return plugin_cls(**constructor_kwargs)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/triggers/cron/__init__.py", line 83, in __init__
+    field = field_class(field_name, exprs, is_default)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/triggers/cron/fields.py", line 33, in __init__
+    self.compile_expressions(exprs)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/triggers/cron/fields.py", line 58, in compile_expressions
+    self.compile_expression(expr)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/triggers/cron/fields.py", line 70, in compile_expression
+    six.raise_from(exc, None)
+  File "<string>", line 3, in raise_from
+ValueError: Error validating expression '60': the last value (60) is higher than the maximum value (59)
+nohup: ignoring input
+nohup: ignoring input
+nohup: ignoring input
+nohup: ignoring input
+nohup: ignoring input
+nohup: ignoring input
+Traceback (most recent call last):
+  File "monitor_main.py", line 40, in <module>
+    def asy_monitor_job():
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 470, in inner
+    self.add_job(func, trigger, args, kwargs, id, name, misfire_grace_time, coalesce,
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 424, in add_job
+    'trigger': self._create_trigger(trigger, trigger_args),
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 925, in _create_trigger
+    return self._create_plugin_instance('trigger', trigger, trigger_args)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 910, in _create_plugin_instance
+    return plugin_cls(**constructor_kwargs)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/triggers/cron/__init__.py", line 83, in __init__
+    field = field_class(field_name, exprs, is_default)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/triggers/cron/fields.py", line 33, in __init__
+    self.compile_expressions(exprs)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/triggers/cron/fields.py", line 58, in compile_expressions
+    self.compile_expression(expr)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/triggers/cron/fields.py", line 70, in compile_expression
+    six.raise_from(exc, None)
+  File "<string>", line 3, in raise_from
+ValueError: Error validating expression '60': the last value (60) is higher than the maximum value (59)
+nohup: ignoring input
+Traceback (most recent call last):
+  File "monitor_main.py", line 40, in <module>
+    def asy_monitor_job():
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 470, in inner
+    self.add_job(func, trigger, args, kwargs, id, name, misfire_grace_time, coalesce,
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 424, in add_job
+    'trigger': self._create_trigger(trigger, trigger_args),
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 925, in _create_trigger
+    return self._create_plugin_instance('trigger', trigger, trigger_args)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/schedulers/base.py", line 910, in _create_plugin_instance
+    return plugin_cls(**constructor_kwargs)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/triggers/cron/__init__.py", line 83, in __init__
+    field = field_class(field_name, exprs, is_default)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/triggers/cron/fields.py", line 33, in __init__
+    self.compile_expressions(exprs)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/triggers/cron/fields.py", line 58, in compile_expressions
+    self.compile_expression(expr)
+  File "/root/anaconda3/envs/ml_app/lib/python3.8/site-packages/apscheduler/triggers/cron/fields.py", line 70, in compile_expression
+    six.raise_from(exc, None)
+  File "<string>", line 3, in raise_from
+ValueError: Error validating expression '60': the last value (60) is higher than the maximum value (59)

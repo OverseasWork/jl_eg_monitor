@@ -36,7 +36,7 @@ def daily_monitor_job():
     log.logger.info(f"finish daily_monitor_job at {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))}")
 
 # 订单详情
-@sched.scheduled_job('cron',minute=60)
+@sched.scheduled_job('cron',minute=0)
 def asy_monitor_job():
     '''订单详情'''
     log.logger.info(f"start asy_monitor_job at {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))}")
