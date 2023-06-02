@@ -73,6 +73,7 @@ def asy_monitor_app():
     log.logger.info(f"开始执行异步程序监控")
     dt = query(risk_url,asy_sql)
     log.logger.info(f"查询结果:{dt}")
+    dt = dt[dt.tot>0]
     if not dt.empty:
         send_wechat(msg=dt,title="异步程序异常")
         log.logger.info("完成异步程序异常报送")

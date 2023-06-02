@@ -71,3 +71,5 @@ Traceback (most recent call last):
     six.raise_from(exc, None)
   File "<string>", line 3, in raise_from
 ValueError: Error validating expression '60': the last value (60) is higher than the maximum value (59)
+nohup: ignoring input
+nohup: ignoring input

@@ -24,7 +24,7 @@ from pytz import timezone
 tz = timezone('Asia/Shanghai')
 
 # 测试 -------------------------------------------------
-daily_monitor_app()
+# daily_monitor_app()
 # 开始任务 -------------------------------------------------
 sched = BlockingScheduler(timezone=tz)
 # 订单详情

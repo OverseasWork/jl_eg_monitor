@@ -1,171 +1,71 @@
-2023-05-31 22:58:43,375 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:cashhome,mysql+mysqlconnector://eg02_cashhome:eg02_cashhome_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg02?charset=utf8
-2023-05-31 22:58:45,476 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
-0     (-,580)  265   0   0.0000   NaN     None     None     None
-1   [580,590)   10   0   0.0000   NaN     None     None     None
-2   [590,605)   12   9   0.7500   3.0   33.33%     None   33.33%
-3   [605,640)   22  15   0.6818   4.0  100.00%  100.00%  100.00%
-4     [640,+)   28  19   0.6786   4.0   75.00%  100.00%   75.00%
-5       未跑模型分  733   0   0.0000   NaN     None     None     None
-6      V4.3模型  337  43   0.1276  11.0   72.73%  100.00%   72.73%
-7     V4.3白名单   27  17   0.6296   4.0   50.00%  100.00%   50.00%
-8      V4.3整体  364  60   0.1648  15.0   66.67%  100.00%   66.67%
-2023-05-31 22:58:47,741 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"4c87a817e76243e8910575f7a85ad43d","count":null} at 2023-05-31 22:58:47
-2023-05-31 22:58:47,741 - /root/jl_eg_monitor/pushplus.py[line:62] - INFO: 完成报送,cashhome,mysql+mysqlconnector://eg02_cashhome:eg02_cashhome_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg02?charset=utf8
-2023-05-31 22:59:47,801 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:cashshawarma,mysql+mysqlconnector://eg03_cashshawarma:eg03_cashshawarma_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg03?charset=utf8
-2023-05-31 22:59:48,958 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range   进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
-0     (-,580)   514   49  0.0953   6.0  100.00%     None  100.00%
-1   [580,590)    24   20  0.8333   5.0   60.00%  100.00%   60.00%
-2   [590,605)    21   12  0.5714   4.0  100.00%  100.00%  100.00%
-3   [605,640)    24   15  0.6250   5.0   60.00%    0.00%   60.00%
-4     [640,+)    23   16  0.6957   3.0   66.67%    0.00%   33.33%
-5       未跑模型分  1651    0  0.0000   NaN     None     None     None
-6      V4.3模型   606  112  0.1848  23.0   78.26%   50.00%   73.91%
-7     V4.3白名单    32   20  0.6250   8.0   75.00%     None   75.00%
-8      V4.3整体   638  132  0.2069  31.0   77.42%   50.00%   74.19%
-2023-05-31 22:59:51,347 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"1a5ba4308477492f8053aa540a3216a6","count":null} at 2023-05-31 22:59:51
-2023-05-31 22:59:51,347 - /root/jl_eg_monitor/pushplus.py[line:62] - INFO: 完成报送,cashshawarma,mysql+mysqlconnector://eg03_cashshawarma:eg03_cashshawarma_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg03?charset=utf8
-2023-05-31 23:00:51,407 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:supercash,mysql+mysqlconnector://eg04_supercash:eg04_supercash_%21%40%23%24Q5EnUS@rm-gw8id623b2e4b62ga2o.mysql.germany.rds.aliyuncs.com/cash_eg04?charset=utf8
-2023-05-31 23:00:51,523 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量  放款率   到期订单   首逾  T+3首逾  当前在逾
-0     V4.3模型    0    0   None  None  None  None  None
-1    V4.3白名单    0    0   None  None  None  None  None
-2     V4.3整体    0    0   None  None  None  None  None
-2023-05-31 23:01:51,583 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:eternal,mysql+mysqlconnector://eg06_eternal:eg06_eternal_%21%40%23%24Q5EnUS@rm-gw8id623b2e4b62ga2o.mysql.germany.rds.aliyuncs.com/cash_eg06?charset=utf8
-2023-05-31 23:01:52,103 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
-0     (-,580)  126   0   0.0000   NaN     None     None     None
-1   [580,590)    8   0   0.0000   NaN     None     None     None
-2   [590,605)   10   8   0.8000   2.0  100.00%     None  100.00%
-3   [605,640)   20  18   0.9000   5.0  100.00%  100.00%  100.00%
-4     [640,+)   32  29   0.9063   7.0   85.71%  100.00%   85.71%
-5       未跑模型分  395   0   0.0000   NaN     None     None     None
-6      V4.3模型  196  55   0.2806  14.0   92.86%  100.00%   92.86%
-7     V4.3白名单   11   7   0.6364   1.0    0.00%     None    0.00%
-8      V4.3整体  207  62   0.2995  15.0   86.67%  100.00%   86.67%
-2023-05-31 23:01:53,153 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"eefbff6889d6492baf81cf84ccba8855","count":null} at 2023-05-31 23:01:53
-2023-05-31 23:01:53,153 - /root/jl_eg_monitor/pushplus.py[line:62] - INFO: 完成报送,eternal,mysql+mysqlconnector://eg06_eternal:eg06_eternal_%21%40%23%24Q5EnUS@rm-gw8id623b2e4b62ga2o.mysql.germany.rds.aliyuncs.com/cash_eg06?charset=utf8
-2023-05-31 23:13:12,762 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:cashhome,mysql+mysqlconnector://eg02_cashhome:eg02_cashhome_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg02?charset=utf8
-2023-05-31 23:13:15,190 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
-0     (-,580)  265   0   0.0000   NaN     None     None     None
-1   [580,590)   10   0   0.0000   NaN     None     None     None
-2   [590,605)   12   9   0.7500   3.0   33.33%     None   33.33%
-3   [605,640)   22  15   0.6818   4.0  100.00%  100.00%  100.00%
-4     [640,+)   28  19   0.6786   4.0   75.00%  100.00%   75.00%
-5       未跑模型分  734   0   0.0000   NaN     None     None     None
-6      V4.3模型  337  43   0.1276  11.0   72.73%  100.00%   72.73%
-7     V4.3白名单   27  17   0.6296   4.0   50.00%  100.00%   50.00%
-8      V4.3整体  364  60   0.1648  15.0   66.67%  100.00%   66.67%
-2023-05-31 23:13:17,120 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"3b1139d909864fb0af341186a53b8818","count":null} at 2023-05-31 23:13:17
-2023-05-31 23:13:17,120 - /root/jl_eg_monitor/pushplus.py[line:66] - INFO: 完成报送,cashhome,mysql+mysqlconnector://eg02_cashhome:eg02_cashhome_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg02?charset=utf8
-2023-05-31 23:16:03,061 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:cashhome,mysql+mysqlconnector://eg02_cashhome:eg02_cashhome_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg02?charset=utf8
-2023-05-31 23:16:05,043 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
-0     (-,580)  265   0   0.0000   NaN     None     None     None
-1   [580,590)   10   0   0.0000   NaN     None     None     None
-2   [590,605)   12   9   0.7500   3.0   33.33%     None   33.33%
-3   [605,640)   22  15   0.6818   4.0  100.00%  100.00%  100.00%
-4     [640,+)   28  20   0.7143   4.0   75.00%  100.00%   75.00%
-5       未跑模型分  734   0   0.0000   NaN     None     None     None
-6      V4.3模型  337  44   0.1306  11.0   72.73%  100.00%   72.73%
-7     V4.3白名单   27  17   0.6296   4.0   50.00%  100.00%   50.00%
-8      V4.3整体  364  61   0.1676  15.0   66.67%  100.00%   66.67%
-2023-05-31 23:16:06,346 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"4af88a6b859544d084a175977df4693f","count":null} at 2023-05-31 23:16:06
-2023-05-31 23:16:06,346 - /root/jl_eg_monitor/pushplus.py[line:66] - INFO: 完成报送,cashhome,mysql+mysqlconnector://eg02_cashhome:eg02_cashhome_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg02?charset=utf8
-2023-05-31 23:17:06,406 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:cashshawarma,mysql+mysqlconnector://eg03_cashshawarma:eg03_cashshawarma_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg03?charset=utf8
-2023-05-31 23:17:07,451 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range   进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
-0     (-,580)   514   49  0.0953   6.0  100.00%     None  100.00%
-1   [580,590)    24   20  0.8333   5.0   60.00%  100.00%   60.00%
-2   [590,605)    21   12  0.5714   4.0  100.00%  100.00%  100.00%
-3   [605,640)    24   15  0.6250   5.0   60.00%    0.00%   60.00%
-4     [640,+)    23   16  0.6957   3.0   66.67%    0.00%   33.33%
-5       未跑模型分  1652    0  0.0000   NaN     None     None     None
-6      V4.3模型   606  112  0.1848  23.0   78.26%   50.00%   73.91%
-7     V4.3白名单    32   20  0.6250   8.0   75.00%     None   75.00%
-8      V4.3整体   638  132  0.2069  31.0   77.42%   50.00%   74.19%
-2023-05-31 23:17:08,503 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"0190389e11b041cda6cedfdeebd5613d","count":null} at 2023-05-31 23:17:08
-2023-05-31 23:17:08,503 - /root/jl_eg_monitor/pushplus.py[line:66] - INFO: 完成报送,cashshawarma,mysql+mysqlconnector://eg03_cashshawarma:eg03_cashshawarma_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg03?charset=utf8
-2023-05-31 23:18:08,563 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:supercash,mysql+mysqlconnector://eg04_supercash:eg04_supercash_%21%40%23%24Q5EnUS@rm-gw8id623b2e4b62ga2o.mysql.germany.rds.aliyuncs.com/cash_eg04?charset=utf8
-2023-05-31 23:18:08,681 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量  放款率   到期订单   首逾  T+3首逾  当前在逾
-0     V4.3模型    0    0   None  None  None  None  None
-1    V4.3白名单    0    0   None  None  None  None  None
-2     V4.3整体    0    0   None  None  None  None  None
-2023-05-31 23:19:08,742 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:eternal,mysql+mysqlconnector://eg06_eternal:eg06_eternal_%21%40%23%24Q5EnUS@rm-gw8id623b2e4b62ga2o.mysql.germany.rds.aliyuncs.com/cash_eg06?charset=utf8
-2023-05-31 23:19:09,259 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
-0     (-,580)  126   0   0.0000   NaN     None     None     None
-1   [580,590)    8   0   0.0000   NaN     None     None     None
-2   [590,605)   10   9   0.9000   2.0  100.00%     None  100.00%
-3   [605,640)   20  19   0.9500   5.0  100.00%  100.00%  100.00%
-4     [640,+)   32  32   1.0000   7.0   85.71%  100.00%   85.71%
-5       未跑模型分  395   0   0.0000   NaN     None     None     None
-6      V4.3模型  196  60   0.3061  14.0   92.86%  100.00%   92.86%
-7     V4.3白名单   11   8   0.7273   1.0    0.00%     None    0.00%
-8      V4.3整体  207  68   0.3285  15.0   86.67%  100.00%   86.67%
-2023-05-31 23:19:10,242 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"343a53b6644a42d8aeefb4191bc9caa1","count":null} at 2023-05-31 23:19:10
-2023-05-31 23:19:10,242 - /root/jl_eg_monitor/pushplus.py[line:66] - INFO: 完成报送,eternal,mysql+mysqlconnector://eg06_eternal:eg06_eternal_%21%40%23%24Q5EnUS@rm-gw8id623b2e4b62ga2o.mysql.germany.rds.aliyuncs.com/cash_eg06?charset=utf8
-2023-05-31 23:20:10,302 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:pyramidcash,mysql+mysqlconnector://eg07_pyramidcash:eg07_pyramidcash_%21%40%23%24Q5EnUS@rm-gw87d6x8wr33227bhno.mysql.germany.rds.aliyuncs.com/cash_eg07?charset=utf8
-2023-05-31 23:20:10,559 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
-0     (-,580)  144   0   0.0000   NaN     None     None     None
-1   [580,590)    3   0   0.0000   NaN     None     None     None
-2   [590,605)    9   7   0.7778   NaN     None     None     None
-3   [605,640)   16  16   1.0000   6.0  100.00%  100.00%  100.00%
-4     [640,+)   25  23   0.9200   6.0  100.00%  100.00%  100.00%
-5       未跑模型分  402   0   0.0000   NaN     None     None     None
-6      V4.3模型  197  46   0.2335  12.0  100.00%  100.00%  100.00%
-7     V4.3白名单   15  12   0.8000   4.0   50.00%     None   50.00%
-8      V4.3整体  212  58   0.2736  16.0   87.50%  100.00%   87.50%
-2023-05-31 23:20:12,935 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"8b48157c90f3414f945f1c57c2d91a66","count":null} at 2023-05-31 23:20:12
-2023-05-31 23:20:12,935 - /root/jl_eg_monitor/pushplus.py[line:66] - INFO: 完成报送,pyramidcash,mysql+mysqlconnector://eg07_pyramidcash:eg07_pyramidcash_%21%40%23%24Q5EnUS@rm-gw87d6x8wr33227bhno.mysql.germany.rds.aliyuncs.com/cash_eg07?charset=utf8
-2023-06-01 08:37:47,292 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:cashhome,mysql+mysqlconnector://eg02_cashhome:eg02_cashhome_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg02?charset=utf8
-2023-06-01 08:37:49,367 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量    放款率   到期订单    首逾    T+3首逾     当前在逾 
-0     (-,580)  283   0   0.0000   NaN    None     None    None
+2023-06-02 11:06:24,712 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:cashhome,mysql+mysqlconnector://eg02_cashhome:eg02_cashhome_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg02?charset=utf8
+2023-06-02 11:06:26,748 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量    放款率   到期订单    首逾    T+3首逾     当前在逾 
+0     (-,580)  306   0   0.0000   NaN    None     None    None
 1   [580,590)   11   0   0.0000   NaN    None     None    None
-2   [590,605)   13   9   0.6923   8.0  62.50%     None  62.50%
-3   [605,640)   22  18   0.8182   7.0  85.71%  100.00%  85.71%
-4     [640,+)   28  23   0.8214   9.0  66.67%   50.00%  66.67%
-5       未跑模型分  755   0   0.0000   NaN    None     None    None
-6      V4.3模型  357  50   0.1401  24.0  70.83%   80.00%  70.83%
-7     V4.3白名单   25  19   0.7600   5.0  40.00%   50.00%  40.00%
-8      V4.3整体  382  69   0.1806  29.0  65.52%   71.43%  65.52%
-2023-06-01 08:37:51,406 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"b3837bc837b442639292e359d9b3ff42","count":null} at 2023-06-01 08:37:51
-2023-06-01 08:37:51,406 - /root/jl_eg_monitor/pushplus.py[line:66] - INFO: 完成报送,cashhome,mysql+mysqlconnector://eg02_cashhome:eg02_cashhome_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg02?charset=utf8
-2023-06-01 08:39:51,506 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:cashshawarma,mysql+mysqlconnector://eg03_cashshawarma:eg03_cashshawarma_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg03?charset=utf8
-2023-06-01 08:39:52,534 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range   进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
-0     (-,580)   518   49  0.0946  14.0   92.86%  100.00%   92.86%
-1   [580,590)    24   20  0.8333   5.0   60.00%   75.00%   60.00%
-2   [590,605)    21   12  0.5714   5.0  100.00%  100.00%  100.00%
-3   [605,640)    24   15  0.6250   5.0   60.00%   60.00%   60.00%
-4     [640,+)    23   16  0.6957   6.0   66.67%   50.00%   50.00%
-5       未跑模型分  1695    0  0.0000   NaN     None     None     None
-6      V4.3模型   610  112  0.1836  35.0   80.00%   75.00%   77.14%
-7     V4.3白名单    32   20  0.6250  11.0   63.64%   71.43%   63.64%
-8      V4.3整体   642  132  0.2056  46.0   76.09%   73.91%   73.91%
-2023-06-01 08:39:54,608 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"8b39960072e8461fb58aebf33f9ab3ad","count":null} at 2023-06-01 08:39:54
-2023-06-01 08:39:54,608 - /root/jl_eg_monitor/pushplus.py[line:66] - INFO: 完成报送,cashshawarma,mysql+mysqlconnector://eg03_cashshawarma:eg03_cashshawarma_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg03?charset=utf8
-2023-06-01 08:41:54,708 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:supercash,mysql+mysqlconnector://eg04_supercash:eg04_supercash_%21%40%23%24Q5EnUS@rm-gw8id623b2e4b62ga2o.mysql.germany.rds.aliyuncs.com/cash_eg04?charset=utf8
-2023-06-01 08:41:54,825 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量  放款率   到期订单   首逾  T+3首逾  当前在逾
+2   [590,605)   15  10   0.6667   8.0  62.50%   33.33%  62.50%
+3   [605,640)   24  20   0.8333   8.0  87.50%  100.00%  87.50%
+4     [640,+)   28  23   0.8214   9.0  66.67%   75.00%  66.67%
+5       未跑模型分  809   0   0.0000   NaN    None     None    None
+6      V4.3模型  384  53   0.1380  25.0  72.00%   72.73%  72.00%
+7     V4.3白名单   28  20   0.7143   7.0  28.57%   50.00%  28.57%
+8      V4.3整体  412  73   0.1772  32.0  62.50%   66.67%  62.50%
+2023-06-02 11:06:28,029 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"4a6c7fda2c1845feaf20109b1f0cba80","count":null} at 2023-06-02 11:06:28
+2023-06-02 11:06:28,029 - /root/jl_eg_monitor/pushplus.py[line:66] - INFO: 完成报送,cashhome,mysql+mysqlconnector://eg02_cashhome:eg02_cashhome_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg02?charset=utf8
+2023-06-02 11:08:28,129 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:cashshawarma,mysql+mysqlconnector://eg03_cashshawarma:eg03_cashshawarma_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg03?charset=utf8
+2023-06-02 11:08:29,238 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range   进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
+0     (-,580)   558   53  0.0950  14.0   92.86%  100.00%   92.86%
+1   [580,590)    25   20  0.8000   5.0   60.00%   60.00%   60.00%
+2   [590,605)    24   13  0.5417   5.0  100.00%  100.00%  100.00%
+3   [605,640)    26   15  0.5769   5.0   60.00%   60.00%   60.00%
+4     [640,+)    23   16  0.6957   6.0   66.67%   33.33%   50.00%
+5       未跑模型分  1920    0  0.0000   NaN     None     None     None
+6      V4.3模型   656  117  0.1784  35.0   80.00%   73.91%   77.14%
+7     V4.3白名单    34   20  0.5882  12.0   66.67%   75.00%   66.67%
+8      V4.3整体   690  137  0.1986  47.0   76.60%   74.19%   74.47%
+2023-06-02 11:08:30,249 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"b6ef263614294b479ea69950a7467502","count":null} at 2023-06-02 11:08:30
+2023-06-02 11:08:30,249 - /root/jl_eg_monitor/pushplus.py[line:66] - INFO: 完成报送,cashshawarma,mysql+mysqlconnector://eg03_cashshawarma:eg03_cashshawarma_%21%40%23%24Q5EnUS@rm-gw86q930f974op7kueo.mysql.germany.rds.aliyuncs.com/cash_eg03?charset=utf8
+2023-06-02 11:10:30,349 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:supercash,mysql+mysqlconnector://eg04_supercash:eg04_supercash_%21%40%23%24Q5EnUS@rm-gw8id623b2e4b62ga2o.mysql.germany.rds.aliyuncs.com/cash_eg04?charset=utf8
+2023-06-02 11:10:30,457 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量  放款率   到期订单   首逾  T+3首逾  当前在逾
 0     V4.3模型    0    0   None  None  None  None  None
 1    V4.3白名单    0    0   None  None  None  None  None
 2     V4.3整体    0    0   None  None  None  None  None
-2023-06-01 08:43:54,925 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:eternal,mysql+mysqlconnector://eg06_eternal:eg06_eternal_%21%40%23%24Q5EnUS@rm-gw8id623b2e4b62ga2o.mysql.germany.rds.aliyuncs.com/cash_eg06?charset=utf8
-2023-06-01 08:43:55,422 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
-0     (-,580)  136   0   0.0000   NaN     None     None     None
+2023-06-02 11:12:30,558 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:eternal,mysql+mysqlconnector://eg06_eternal:eg06_eternal_%21%40%23%24Q5EnUS@rm-gw8id623b2e4b62ga2o.mysql.germany.rds.aliyuncs.com/cash_eg06?charset=utf8
+2023-06-02 11:12:31,069 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
+0     (-,580)  144   0   0.0000   NaN     None     None     None
 1   [580,590)    8   0   0.0000   NaN     None     None     None
-2   [590,605)   11   9   0.8182   5.0   80.00%  100.00%   80.00%
-3   [605,640)   20  19   0.9500   8.0  100.00%  100.00%  100.00%
-4     [640,+)   35  32   0.9143  11.0   72.73%  100.00%   72.73%
-5       未跑模型分  406   0   0.0000   NaN     None     None     None
-6      V4.3模型  210  60   0.2857  24.0   83.33%  100.00%   83.33%
-7     V4.3白名单   12   8   0.6667   1.0    0.00%    0.00%    0.00%
-8      V4.3整体  222  68   0.3063  25.0   80.00%   90.91%   80.00%
-2023-06-01 08:43:56,491 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"641c7244d4514589b7c8eab730bc520f","count":null} at 2023-06-01 08:43:56
-2023-06-01 08:43:56,491 - /root/jl_eg_monitor/pushplus.py[line:66] - INFO: 完成报送,eternal,mysql+mysqlconnector://eg06_eternal:eg06_eternal_%21%40%23%24Q5EnUS@rm-gw8id623b2e4b62ga2o.mysql.germany.rds.aliyuncs.com/cash_eg06?charset=utf8
-2023-06-01 08:45:56,591 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:pyramidcash,mysql+mysqlconnector://eg07_pyramidcash:eg07_pyramidcash_%21%40%23%24Q5EnUS@rm-gw87d6x8wr33227bhno.mysql.germany.rds.aliyuncs.com/cash_eg07?charset=utf8
-2023-06-01 08:45:56,847 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
-0     (-,580)  154   0   0.0000   NaN     None     None     None
+2   [590,605)   12   9   0.7500   5.0   80.00%  100.00%   80.00%
+3   [605,640)   24  21   0.8750   8.0  100.00%  100.00%  100.00%
+4     [640,+)   36  35   0.9722  14.0   78.57%   85.71%   78.57%
+5       未跑模型分  439   0   0.0000   NaN     None     None     None
+6      V4.3模型  224  65   0.2902  27.0   85.19%   92.86%   85.19%
+7     V4.3白名单   15   9   0.6000   2.0   50.00%    0.00%   50.00%
+8      V4.3整体  239  74   0.3096  29.0   82.76%   86.67%   82.76%
+2023-06-02 11:12:34,601 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"e29d4c247de34597abf188f555ca0e6c","count":null} at 2023-06-02 11:12:34
+2023-06-02 11:12:34,601 - /root/jl_eg_monitor/pushplus.py[line:66] - INFO: 完成报送,eternal,mysql+mysqlconnector://eg06_eternal:eg06_eternal_%21%40%23%24Q5EnUS@rm-gw8id623b2e4b62ga2o.mysql.germany.rds.aliyuncs.com/cash_eg06?charset=utf8
+2023-06-02 11:14:34,701 - /root/jl_eg_monitor/pushplus.py[line:54] - INFO: 开始执行:pyramidcash,mysql+mysqlconnector://eg07_pyramidcash:eg07_pyramidcash_%21%40%23%24Q5EnUS@rm-gw87d6x8wr33227bhno.mysql.germany.rds.aliyuncs.com/cash_eg07?charset=utf8
+2023-06-02 11:14:34,960 - /root/jl_eg_monitor/pushplus.py[line:56] - INFO: 查询结果:  socre_range  进件量  放款量    放款率   到期订单    首逾     T+3首逾     当前在逾  
+0     (-,580)  170   0   0.0000   NaN     None     None     None
 1   [580,590)    4   0   0.0000   NaN     None     None     None
 2   [590,605)    9   7   0.7778   3.0   66.67%     None   66.67%
-3   [605,640)   16  16   1.0000   8.0  100.00%  100.00%  100.00%
-4     [640,+)   28  23   0.8214   6.0  100.00%  100.00%  100.00%
-5       未跑模型分  418   0   0.0000   NaN     None     None     None
-6      V4.3模型  211  46   0.2180  17.0   94.12%  100.00%   94.12%
-7     V4.3白名单   15  12   0.8000   4.0   50.00%    0.00%   50.00%
-8      V4.3整体  226  58   0.2566  21.0   85.71%   83.33%   85.71%
-2023-06-01 08:45:58,077 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"5ab80305633d47da8483e5c0011f8805","count":null} at 2023-06-01 08:45:58
-2023-06-01 08:45:58,077 - /root/jl_eg_monitor/pushplus.py[line:66] - INFO: 完成报送,pyramidcash,mysql+mysqlconnector://eg07_pyramidcash:eg07_pyramidcash_%21%40%23%24Q5EnUS@rm-gw87d6x8wr33227bhno.mysql.germany.rds.aliyuncs.com/cash_eg07?charset=utf8
+3   [605,640)   17  17   1.0000   9.0  100.00%  100.00%  100.00%
+4     [640,+)   27  25   0.9259  10.0  100.00%  100.00%  100.00%
+5       未跑模型分  448   0   0.0000   NaN     None     None     None
+6      V4.3模型  227  49   0.2159  22.0   95.45%  100.00%   95.45%
+7     V4.3白名单   19  14   0.7368   4.0   50.00%   50.00%   50.00%
+8      V4.3整体  246  63   0.2561  26.0   88.46%   87.50%   88.46%
+2023-06-02 11:14:36,285 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"05cbfcdf0823406aa13435101e8b261e","count":null} at 2023-06-02 11:14:36
+2023-06-02 11:14:36,286 - /root/jl_eg_monitor/pushplus.py[line:66] - INFO: 完成报送,pyramidcash,mysql+mysqlconnector://eg07_pyramidcash:eg07_pyramidcash_%21%40%23%24Q5EnUS@rm-gw87d6x8wr33227bhno.mysql.germany.rds.aliyuncs.com/cash_eg07?charset=utf8
+2023-06-02 12:00:00,000 - monitor_main.py[line:42] - INFO: start asy_monitor_job at 2023-06-02 12:00:00
+2023-06-02 12:00:00,000 - /root/jl_eg_monitor/pushplus.py[line:73] - INFO: 开始执行异步程序监控
+2023-06-02 12:00:00,074 - /root/jl_eg_monitor/pushplus.py[line:75] - INFO: 查询结果:   tot
+0   0 
+2023-06-02 12:00:01,367 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"03e36d41765049909456848064d4eec6","count":null} at 2023-06-02 12:00:01
+2023-06-02 12:00:01,367 - /root/jl_eg_monitor/pushplus.py[line:78] - INFO: 完成异步程序异常报送
+2023-06-02 12:00:01,367 - monitor_main.py[line:44] - INFO: finish asy_monitor_job at 2023-06-02 12:00:01
+2023-06-02 13:00:00,001 - monitor_main.py[line:42] - INFO: start asy_monitor_job at 2023-06-02 13:00:00
+2023-06-02 13:00:00,001 - /root/jl_eg_monitor/pushplus.py[line:73] - INFO: 开始执行异步程序监控
+2023-06-02 13:00:00,086 - /root/jl_eg_monitor/pushplus.py[line:75] - INFO: 查询结果:   tot
+0   0 
+2023-06-02 13:00:01,393 - /root/jl_eg_monitor/pushplus.py[line:45] - INFO: send {"code":200,"msg":"请求成功","data":"d9b9bcc48dae4a71bf2cc43911ecfba8","count":null} at 2023-06-02 13:00:01
+2023-06-02 13:00:01,394 - /root/jl_eg_monitor/pushplus.py[line:78] - INFO: 完成异步程序异常报送
+2023-06-02 13:00:01,394 - monitor_main.py[line:44] - INFO: finish asy_monitor_job at 2023-06-02 13:00:01
